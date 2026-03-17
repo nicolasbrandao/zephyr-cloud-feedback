@@ -52,18 +52,45 @@ import Layout from '../layouts/Layout.astro';
                 <h2>My Deployment Experience</h2>
                 <div class="feedback-grid">
                     <div class="feedback-item">
+                        <h3>Blazing Fast Deployment ⚡</h3>
+                        <p>
+                            The deployment speed with this setup is absolutely fantastic. Because assets are verified via content-addressed storage, only modified files are uploaded. The time between running the build command in the terminal and having the live URL on the edge network is practically instant, heavily optimizing the development experience and feedback loop.
+                        </p>
+                    </div>
+                    <div class="feedback-item">
                         <h3>What went well</h3>
                         <p>
                             The setup was incredibly smooth. Adding the plugin to <code>astro.config.mjs</code> took seconds. The first-time browser authentication via the CLI was seamless and securely wrote credentials to my local machine. The deployment speed in the terminal was impressively fast, and getting an instant live URL without having to configure a CI pipeline or a complex dashboard project was a great developer experience.
                         </p>
                     </div>
                     <div class="feedback-item">
-                        <h3>Considerations</h3>
+                        <h3>Generous Free Tier</h3>
                         <p>
-                            Currently, the Astro integration only supports Static Site Generation (SSG). While perfect for many Astro sites, those relying heavily on Server-Side Rendering (SSR) might have to wait for future support or use different architecture patterns. Additionally, a new project requires an initialized git repository with a remote origin for production deployments to work, which enforces good practices but might briefly interrupt a quick prototyping flow.
+                            The availability of a solid free tier for developers is a huge plus. It provides the perfect environment for small teams and independent developers to prototype, evaluate the platform, or host personal projects on Zephyr Cloud without having to worry about upfront costs.
                         </p>
-                        <p style="margin-top: 1rem;">
-                            <strong>URL Formatting Warning:</strong> The auto-generated URLs contain the user's email replaced with hyphens (e.g., <code>gmail-com</code>). This formatting, ending in a common domain extension format, can trigger browser phishing protections or fraud warnings before the user joins the page. Improving this generation format would reduce friction when visiting auto-generated deploy links.
+                    </div>
+                    <div class="feedback-item">
+                        <h3>Agentic Development Ready</h3>
+                        <p>
+                            The official documentation is thoughtfully designed for modern AI workflows. Providing built-in options to copy content directly as Markdown makes it effortless to feed Zephyr's technical guides straight into AI coding assistants and autonomous agents.
+                        </p>
+                    </div>
+                    <div class="feedback-item">
+                        <h3>Future Feature: MCP Server or AI SKILL</h3>
+                        <p>
+                            To take the AI integration even further, providing an official <strong>MCP (Model Context Protocol) server</strong> or a pre-packaged AI <strong>SKILL</strong> would be an incredible addition. This would allow agents to automatically interact with Zephyr Cloud directly from the user's development environment.
+                        </p>
+                    </div>
+                    <div class="feedback-item">
+                        <h3>Future Support for SSR</h3>
+                        <p>
+                            Currently, the Astro integration primarily supports Static Site Generation (SSG). However, it seems active development is already underway to bring Server-Side Rendering (SSR) capabilities to the platform. Once SSR is fully supported, it will open up even more powerful dynamic architectures for Astro projects on Zephyr Cloud. Additionally, a new project currently requires an initialized git repository with a remote origin for production deployments to work, which enforces good practices but might briefly interrupt a quick prototyping flow.
+                        </p>
+                    </div>
+                    <div class="feedback-item">
+                        <h3>Auto-generated URLs Formatting</h3>
+                        <p>
+                            <strong>Warning:</strong> The auto-generated URLs contain the user's email replaced with hyphens (e.g., <code>gmail-com</code>). This formatting, ending in a common domain extension format, can trigger browser phishing protections or fraud warnings before the user joins the page. Improving this generation format would reduce friction when visiting auto-generated deploy links.
                         </p>
                     </div>
                 </div>
