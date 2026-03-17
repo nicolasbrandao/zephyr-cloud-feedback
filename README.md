@@ -5,7 +5,7 @@ This project is an Astro application deployed to Zephyr Cloud as part of a techn
 ## 🚀 Live Deployment
 
 The application is deployed on Zephyr Cloud's edge network. You can access the live version here:
-**[View on Zephyr Cloud](https://nicolas-brandaor-gmail-com-4-zephyr-cloud-feedbac-0f25eb41d-ze.zephyrcloud.app)**
+**[View on Zephyr Cloud](https://nicolas-brandaor-gmail-com-5-zephyr-cloud-feedbac-47479a0df-ze.zephyrcloud.app)**
 
 ## 🧞 Local Development Commands
 
