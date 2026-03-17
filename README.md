@@ -1,34 +1,13 @@
-# Astro Starter Kit: Basics
+# Zephyr Cloud Feedback Assignment
 
-```sh
-pnpm create astro@latest -- --template basics
-```
+This project is an Astro application deployed to Zephyr Cloud as part of a technical assignment. It serves both as a demonstration of the deployment process and as a structured feedback document detailing the experience of using Zephyr Cloud.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🚀 Live Deployment
 
-## 🚀 Project Structure
+The application is deployed on Zephyr Cloud's edge network. You can access the live version here:
+**[View on Zephyr Cloud](https://nicolas-brandaor-gmail-com-1-zephyr-cloud-feedbac-5af9d2a9e-ze.zephyrcloud.app)**
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
-
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
+## 🧞 Local Development Commands
 
 All commands are run from the root of the project, from a terminal:
 
@@ -36,11 +15,9 @@ All commands are run from the root of the project, from a terminal:
 | :------------------------ | :----------------------------------------------- |
 | `pnpm install`             | Installs dependencies                            |
 | `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
+| `pnpm build`           | Build your production site to `./dist/` and deploy to Zephyr         |
 | `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## 📝 About the Implementation
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+This project implements the requirements outlined in the `specs/001-zephyr-cloud-deployment.md` specification. It uses the `zephyr-astro-integration` package to achieve automated builds and deployments.

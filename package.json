@@ -13,5 +13,8 @@
   },
   "dependencies": {
     "astro": "^6.0.5"
+  },
+  "devDependencies": {
+    "zephyr-astro-integration": "^0.1.16"
   }
 }
