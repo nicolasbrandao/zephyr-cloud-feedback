@@ -39,10 +39,10 @@ This is the standard workflow for all new features. Follow this process to ensur
 
 ## Don't
 
-- ⚠️ Go to next phase without Human approval
-- ⚠️ Assume you know everything - things get outdated quickly
-- ⚠️ Write Buttons and text content in english
-- ⚠️ Write docs in pt-br
+- ⚠️ Don't go to next phase without Human approval
+- ⚠️ Don't assume you know everything - things get outdated quickly
+- ⚠️ Don't write Buttons and text content in english
+- ⚠️ Don't write docs in pt-br
 
 ---
 
