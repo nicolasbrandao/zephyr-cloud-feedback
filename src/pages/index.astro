@@ -62,6 +62,9 @@ import Layout from '../layouts/Layout.astro';
                         <p>
                             Currently, the Astro integration only supports Static Site Generation (SSG). While perfect for many Astro sites, those relying heavily on Server-Side Rendering (SSR) might have to wait for future support or use different architecture patterns. Additionally, a new project requires an initialized git repository with a remote origin for production deployments to work, which enforces good practices but might briefly interrupt a quick prototyping flow.
                         </p>
+                        <p style="margin-top: 1rem;">
+                            <strong>URL Formatting Warning:</strong> The auto-generated URLs contain the user's email replaced with hyphens (e.g., <code>gmail-com</code>). This formatting, ending in a common domain extension format, can trigger browser phishing protections or fraud warnings before the user joins the page. Improving this generation format would reduce friction when visiting auto-generated deploy links.
+                        </p>
                     </div>
                 </div>
             </div>
