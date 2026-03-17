@@ -1,11 +1,278 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+	<main class="container">
+        <header class="hero">
+            <div class="badge">Technical Assignment</div>
+            <h1>Zephyr Cloud <span class="text-gradient">Feedback</span></h1>
+            <p class="subtitle">Astro project deployment evaluation and documentation.</p>
+            <div class="actions">
+                <a href="https://github.com/nicolasbrandao/zephyr-cloud-feedback" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View GitHub Repository
+                </a>
+            </div>
+        </header>
+
+        <section class="content-section">
+            <div class="card glass">
+                <h2>About This Project</h2>
+                <p>
+                    This static site was created as part of a technical assignment to evaluate Zephyr Cloud. The objective was to integrate the official <code>zephyr-astro-integration</code>, experience the browser-based authentication, and successfully deploy an Astro project to Zephyr's global edge network.
+                </p>
+                <p>
+                    The site serves a dual purpose: it is both the application being deployed and the documentation of the deployment process itself.
+                </p>
+            </div>
+
+            <div class="card glass">
+                <h2>How Zephyr Cloud Works</h2>
+                <p>Based on my research and experience, here is a breakdown of Zephyr Cloud's deployment model:</p>
+                <ul class="feature-list">
+                    <li>
+                        <strong>Integration Hook:</strong> The Astro integration neatly hooks into Vite's build step, meaning <code>pnpm build</code> is all you need.
+                    </li>
+                    <li>
+                        <strong>Content-Addressed Storage:</strong> Assets are hashed and checked against what's already in the cloud, so only new or modified assets are uploaded, significantly accelerating subsequent builds.
+                    </li>
+                    <li>
+                        <strong>Immutable Snapshots:</strong> Every build creates a permanent, immutable version of the project. There's no overwriting—just new snapshots.
+                    </li>
+                    <li>
+                        <strong>Edge Distribution:</strong> Once the snapshot is uploaded, it's immediately pushed to hundreds of edge locations globally for low latency.
+                    </li>
+                    <li>
+                        <strong>Tags & Routing:</strong> Instead of rebuilding for rollbacks, you simply change a tag (like 'production') to point to a different immutable build. This turns rollbacks into instant, metadata-only operations.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card glass">
+                <h2>My Deployment Experience</h2>
+                <div class="feedback-grid">
+                    <div class="feedback-item">
+                        <h3>What went well</h3>
+                        <p>
+                            The setup was incredibly smooth. Adding the plugin to <code>astro.config.mjs</code> took seconds. The first-time browser authentication via the CLI was seamless and securely wrote credentials to my local machine. The deployment speed in the terminal was impressively fast, and getting an instant live URL without having to configure a CI pipeline or a complex dashboard project was a great developer experience.
+                        </p>
+                    </div>
+                    <div class="feedback-item">
+                        <h3>Considerations</h3>
+                        <p>
+                            Currently, the Astro integration only supports Static Site Generation (SSG). While perfect for many Astro sites, those relying heavily on Server-Side Rendering (SSR) might have to wait for future support or use different architecture patterns. Additionally, a new project requires an initialized git repository with a remote origin for production deployments to work, which enforces good practices but might briefly interrupt a quick prototyping flow.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Deployed on <strong>Zephyr Cloud</strong></p>
+        </footer>
+	</main>
 </Layout>
+
+<style>
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+    }
+
+    .hero {
+        text-align: center;
+        margin-bottom: 5rem;
+        animation: fadeUp 0.8s ease-out;
+    }
+
+    .badge {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        background-color: rgba(59, 130, 246, 0.1);
+        color: var(--accent);
+        border: 1px solid rgba(59, 130, 246, 0.2);
+        border-radius: 999px;
+        font-size: 0.875rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+        font-weight: 800;
+        line-height: 1.1;
+        margin: 0 0 1rem 0;
+        letter-spacing: -0.02em;
+    }
+
+    .text-gradient {
+        background: var(--gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .subtitle {
+        font-size: 1.25rem;
+        color: var(--muted);
+        max-width: 600px;
+        margin: 0 auto 2.5rem auto;
+    }
+
+    .actions {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.2s ease;
+    }
+
+    .btn-secondary {
+        background-color: rgba(255, 255, 255, 0.05);
+        color: var(--text);
+        border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .content-section {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .card {
+        padding: 2.5rem;
+        border-radius: 16px;
+        background-color: var(--card-bg);
+        border: 1px solid var(--border);
+        box-shadow: 0 4px 24px -8px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease, border-color 0.3s ease;
+        animation: fadeUp 0.8s ease-out backwards;
+    }
+
+    .card:nth-child(2) { animation-delay: 0.1s; }
+    .card:nth-child(3) { animation-delay: 0.2s; }
+
+    .card:hover {
+        transform: translateY(-2px);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .glass {
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+    }
+
+    h2 {
+        font-size: 1.75rem;
+        font-weight: 600;
+        margin: 0 0 1.5rem 0;
+        color: #f4f4f5;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin: 0 0 1rem 0;
+        color: #e4e4e7;
+    }
+
+    p {
+        margin: 0 0 1rem 0;
+    }
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+
+    code {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 0.2em 0.4em;
+        border-radius: 4px;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-size: 0.875em;
+        color: #93c5fd;
+    }
+
+    .feature-list {
+        margin: 0;
+        padding-left: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .feature-list li {
+        padding-left: 0.5rem;
+        color: var(--muted);
+    }
+
+    .feature-list strong {
+        color: var(--text);
+        font-weight: 500;
+    }
+
+    .feedback-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    @media (min-width: 768px) {
+        .feedback-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        h1 {
+            font-size: 4.5rem;
+        }
+    }
+
+    .feedback-item {
+        background-color: rgba(0, 0, 0, 0.2);
+        padding: 1.5rem;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .feedback-item p {
+        color: var(--muted);
+        font-size: 0.95rem;
+    }
+
+    footer {
+        margin-top: 5rem;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.875rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--border);
+    }
+
+    @keyframes fadeUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
