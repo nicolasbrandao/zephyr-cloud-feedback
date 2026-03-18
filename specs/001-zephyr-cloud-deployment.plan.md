@@ -66,10 +66,10 @@ Remove the default Astro welcome component.
 
 ### Task 5: Final Deploy & Verify (~5 min)
 
-- [ ] Run `pnpm build` to deploy the feedback page to Zephyr Cloud
-- [ ] Verify the deployment URL serves the updated feedback page
-- [ ] Commit final changes and push
-- [ ] Test responsiveness and visual quality
+- [x] Run `pnpm build` to deploy the feedback page to Zephyr Cloud
+- [x] Verify the deployment URL serves the updated feedback page
+- [x] Commit final changes and push
+- [x] Test responsiveness and visual quality
 
 ## Verification Plan
 

@@ -29,11 +29,11 @@ As a developer evaluating Zephyr Cloud, I want to deploy my Astro project to Zep
 
 ## Success Criteria
 
-- [ ] Astro project builds successfully with `zephyr-astro-integration`
-- [ ] Application is deployed to Zephyr Cloud with a working public URL
-- [ ] The Astro site itself serves as the feedback document (understanding + feedback)
-- [ ] GitHub repository is public with all the work
-- [ ] Deployed application URL is accessible and functional
+- [x] Astro project builds successfully with `zephyr-astro-integration`
+- [x] Application is deployed to Zephyr Cloud with a working public URL
+- [x] The Astro site itself serves as the feedback document (understanding + feedback)
+- [x] GitHub repository is public with all the work
+- [x] Deployed application URL is accessible and functional
 
 ## Notes
 
